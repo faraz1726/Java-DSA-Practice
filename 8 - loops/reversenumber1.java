@@ -8,7 +8,6 @@ public class reversenumber1 {
             int lastdigit = number%10;
             rev = ((rev*10) + lastdigit);
             number=number/10;
-            
         }
         System.out.print(rev);
     }
