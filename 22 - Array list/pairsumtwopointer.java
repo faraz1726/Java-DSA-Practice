@@ -12,7 +12,7 @@ public class pairsumtwopointer {
             else if( list.get(lp) + list.get(rp) < target){
                 lp++;
             }
-            else{
+            else{   //list.get(lp) + list.get(rp) > target
                 rp--;
             }
         }  
