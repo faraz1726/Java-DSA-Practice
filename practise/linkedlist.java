@@ -45,6 +45,18 @@ public class linkedlist {
         System.out.println("null");
 
     }
+
+    public void add(int idx, int data){
+        Node newnode = new Node(data);
+        Node temp = head;
+        int i =0;
+        while(i<idx-1){
+            i++;
+            temp = temp.next;
+        }
+        newnode.next = temp.next;
+        temp.next = newnode;
+    }
     public static void main(String args[]){
         linkedlist ll = new linkedlist();
         ll.print();
@@ -52,9 +64,11 @@ public class linkedlist {
         ll.print();
         ll.addfirst(1);
         ll.print();
-        ll.addlast(3);
-        ll.print();
         ll.addlast(4);
+        ll.print();
+        ll.addlast(5);
+        ll.print();
+        ll.add(2,3);
         ll.print();
 
     }

@@ -48,13 +48,20 @@ public class LinkedList3 {
 
     public void add(int idx , int data){
         Node newnode = new Node(data);
+        /*take a temporary variable temp pointing/equal to head , and a 
+          pointer i staring from 0, and 
+          going untill it becomes equal to index-1 ,called as previous ,
+          when this condition becomes i=idx-1 (THATS WHY IT IS OUT OF LOOP)
+          means temp = previous , than temp.next = newnode.next
+          than we create a newnode and make the pointer of this previous node
+          i.e previous.next/temp.next points to our new node.*/
         Node temp = head;
         int i = 0;
         while( i < (idx-1)){
             temp = temp.next;
             i++;
         }
-        //when  i = idx-1 , means temp->prev 
+        //when the condition becomes i = idx-1 , means temp->prev 
         newnode.next = temp.next;
         temp.next = newnode;
     }
