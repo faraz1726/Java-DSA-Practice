@@ -9,7 +9,6 @@ public class while3 {
         while(i<=number){
             sum=sum+i;
             i++;
-            
         }
         System.out.println("sum of numbers is "+sum);
 

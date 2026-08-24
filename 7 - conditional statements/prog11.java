@@ -6,7 +6,7 @@ public class prog11 {
         int year = sc.nextInt();
 
         if(year%4==0){
-            if(year%100==0){
+            if(year%100==0){/*if not divisible by 100 but by 4 means a leap year */
                 if(year%400==0){
                     System.out.println("yes leap year");
                 }
