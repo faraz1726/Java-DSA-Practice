@@ -11,9 +11,11 @@ public class LinkedList3 {
     }
     public static Node head;
     public static Node tail;
+    public static int size;
 
-    public void addfist(int data){
+    public void addfirst(int data){
         Node newnode = new Node(data);
+        size++;
         if(head == null){
             head = tail = newnode;
             return;
@@ -24,6 +26,7 @@ public class LinkedList3 {
 
     public void addlast(int data){
         Node newnode = new Node(data);
+        size++;
         if(head == null){
             head  = tail = newnode;
             return;
@@ -48,6 +51,7 @@ public class LinkedList3 {
 
     public void add(int idx , int data){
         Node newnode = new Node(data);
+        size++;
         /*take a temporary variable temp pointing/equal to head , and a 
           pointer i staring from 0, and 
           going untill it becomes equal to index-1 ,called as previous ,
@@ -68,16 +72,17 @@ public class LinkedList3 {
     public static void main(String[] args) {
         LinkedList3 ll  =new LinkedList3();
         ll.print();
-        ll.addfist(2);
+        ll.addfirst(2);
         ll.print();
-        ll.addfist(1);
-        ll.print();
-        ll.addlast(3);
+        ll.addfirst(1);
         ll.print();
         ll.addlast(4);
         ll.print();
-        ll.add(2, 9);
+        ll.addlast(5);
         ll.print();
+        ll.add(2, 3);
+        ll.print();
+        System.out.println("size is "+size);
         
     }
 }

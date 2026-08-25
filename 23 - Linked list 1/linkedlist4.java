@@ -91,7 +91,7 @@ public class linkedlist4 {
             return val;
         }
         Node prev = head;
-        /*prev noid is the one having size-2 index */
+        /*prev noid is the one having index as size-2  */
         for(int i = 0; i<size-2; i++ ){/*last element index is size-1 */
             prev = prev.next;
         }
@@ -115,6 +115,25 @@ public class linkedlist4 {
         }
         return -1;
     }
+
+    public int helper(Node head , int key){
+        if(head == null){
+            return -1;
+        }
+
+        if(head.data == key){
+            return 0;
+        }
+        int idx = helper(head.next , key);
+        if(idx == -1){
+            return -1;
+        }
+
+        return idx+1;
+    }
+    public int recsearch(int key){
+        return helper(head , key);
+    }
     public static void main(String args[]){
         linkedlist4 ll = new linkedlist4();
         ll.print();
@@ -132,8 +151,8 @@ public class linkedlist4 {
         ll.print();
         ll.removelast();
         ll.print();
-        System.out.println(ll.itrsearch(2));
-        System.out.println(ll.itrsearch(10));
+        System.out.println(ll.recsearch(4));
+        System.out.println(ll.recsearch(10));
         System.out.println("size is "+size);
 
     }
