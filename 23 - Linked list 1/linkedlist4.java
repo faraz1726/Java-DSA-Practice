@@ -134,6 +134,20 @@ public class linkedlist4 {
     public int recsearch(int key){
         return helper(head , key);
     }
+
+    public void reverse(){/*remember by 3 varaible and 4 logics */
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null){/*prev -- curr -- next */
+            next = curr.next;/*current.next is pointing forward to next as usual */
+            curr.next = prev;/*actual logic to reverse */
+            prev = curr;/*now current becomes previous */
+            curr = next;/*and next becomes current */
+        }
+        head = prev;
+    }
     public static void main(String args[]){
         linkedlist4 ll = new linkedlist4();
         ll.print();
@@ -147,9 +161,13 @@ public class linkedlist4 {
         ll.print();
         ll.add(2,3);
         ll.print();
+        ll.reverse();
+        ll.print();
         ll.removefirst();
         ll.print();
         ll.removelast();
+        ll.print();
+        ll.reverse();
         ll.print();
         System.out.println(ll.recsearch(4));
         System.out.println(ll.recsearch(10));
