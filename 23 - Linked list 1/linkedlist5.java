@@ -156,8 +156,8 @@ public class linkedlist5 {
             temp = temp.next;
             sz++;
         }
-        /*nth index is from the tail or end of the ll, so if n equlas to size means 
-          we have to delete head */
+        /*nth index is from the tail or end of the ll, so if n equlas to size means, 
+          its refering to head , so we have to delete head */
         if(n == sz){
             head = head.next;
             return;
