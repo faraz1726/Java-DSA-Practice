@@ -39,6 +39,8 @@ public class StackB {
         while(!s.isempty()){/*while stack is not empty */
             System.out.println(s.peek());
             s.pop();
+            /*or directly use  
+            System.out.println(s.pop())*/
         }
     }
 }
