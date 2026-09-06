@@ -4,7 +4,8 @@ public class pushatbottom2 {
     /*empty → put data. Otherwise → remove top → recursively go to bottom → put top back. */
     /*Keep removing the top element until the stack becomes empty. Then put 4 there. 
     After that, put all the removed elements back. */
-    
+
+    /*using recursion */
     public static void PushAtBottom(Stack<Integer> s , int data){
         while(s.isEmpty()){
             s.push(data);
