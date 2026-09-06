@@ -1,6 +1,6 @@
 import java.util.*;
 public class pushatbottom {
-    public static void PushAtBottom(Stack<Integer> s , int m){
+    public static void PushAtBottom(Stack<Integer> s , int data){
 
         /*using extra memory as array list */
         ArrayList<Integer> list = new ArrayList<>();
@@ -11,7 +11,7 @@ public class pushatbottom {
         }
          
         /*adding extra number at bottom */
-        s.push(m);/*[4] */
+        s.push(data);/*[4] */
         
         for(int i = list.size()-1; i>=0 ; i--){
             s.push(list.get(i));
