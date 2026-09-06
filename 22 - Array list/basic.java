@@ -13,7 +13,7 @@ public class basic {
         list.add(4);
         list.add(5);
         list.add(1,9); //to store element in a index
-         System.out.println(list);
+        System.out.println(list);
 
         // to get element
         int element = list.get(3);
