@@ -36,6 +36,5 @@ public class ReverseStack {
             System.out.println(s.pop());
         }
     
-
     }
 }
