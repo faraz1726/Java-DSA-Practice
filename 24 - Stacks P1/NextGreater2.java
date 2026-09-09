@@ -1,5 +1,6 @@
 import java.util.*;
 public class NextGreater2 {
+    /*this is next greater right */
     public static void main(String args[]){
         int[] arr = {6,8,0,1,3};
         Stack<Integer> s = new Stack<>();
