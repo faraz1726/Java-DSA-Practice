@@ -5,8 +5,7 @@ public class breakeyword {
          for(i=0;i<=5;i++){
             if(i==3){
                 System.out.print("i am out of the loop");
-                break;
-                
+                break;  
             }
             System.out.println(i);
             
