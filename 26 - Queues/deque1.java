@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.LinkedList;
+/*DEQUE MEANS DOUBLE ENDED QUEUE */
 public class deque1 {
     public static void main(String args[]){
         Deque<Integer> deque = new LinkedList<>();
