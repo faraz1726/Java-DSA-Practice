@@ -5,7 +5,7 @@ public class interleave3 {
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
         
-        int size = 10;
+        int size = q.size();
         int half = size/2;
 
 
