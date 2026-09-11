@@ -8,7 +8,8 @@ public class binomial {
         }
         return fact;
     }
-// this is function 2 for binomial coefficient
+// this is function 2 for binomial coefficient( Combination )
+// this is Combination formula
     public static int bincoeffi(int a , int b){
         int nfact = factorial(a);
         int rfact = factorial(b);

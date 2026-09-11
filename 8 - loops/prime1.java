@@ -11,7 +11,7 @@ public class prime1 {
             flag = 1;
         }
         else{
-            for(i=2;i<=number;i++){
+            for(i=2;i<number;i++){
                 if(number%i==0){
                     flag=1;
                     break;
