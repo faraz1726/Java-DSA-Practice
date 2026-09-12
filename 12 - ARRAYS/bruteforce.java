@@ -10,7 +10,6 @@ public class bruteforce {
             int start =i;
             for(int j=i; j<numbers.length ; j++){
                 int end=j;
-
                 currsum = 0;
                 for(int k=start ; k<=end ;k++){
                     currsum += numbers[k];
