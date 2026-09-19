@@ -1,4 +1,5 @@
 import java.util.*;
+//FRACTIONAL KNAPSACK (BAG) MEANS ELEMENTS CAN BE ADDED IN ANY RATIO OR PROPORTION.
 public class fractionknapsack {
     public static void main(String args[]){
         int weight[] = {10,20,30};
