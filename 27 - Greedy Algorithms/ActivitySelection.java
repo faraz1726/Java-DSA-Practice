@@ -21,7 +21,7 @@ public class ActivitySelection {
         ArrayList<Integer> ans = new ArrayList<>();
 
         //for activity 1 (always selected)
-        maxmactivity = 1;
+        maxmactivity = 1; //activity first(1) is always selected
         ans.add(activities[0][0]);// added activity first
         int lastend = activities[0][2];// end time of first activity
         for( int i = 0 ; i<end.length ; i++){
