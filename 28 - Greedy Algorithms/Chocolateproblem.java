@@ -18,7 +18,7 @@ public class Chocolateproblem {
                 hp++;
                 h++;
             }
-            else{
+            else{ // vertical cut
                 cost += (costver[v]*hp);
                 vp++;
                 v++;
