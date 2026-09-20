@@ -41,6 +41,24 @@ public class PreorderBuildTree {
         
         }
 
+        public static void inorder(Node root){
+            if(root == null){
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }
+
+        public static void postorder(Node root){
+            if(root == null){
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.print(root.data + " ") ;
+        }
+
     }
     public static void main(String args[]){
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1}; 
@@ -49,8 +67,15 @@ public class PreorderBuildTree {
         System.out.println(root.data);// it will give one
 
         System.out.print("the preporder traversal is  ");
-        tree.preorder(root);// answer is same as int nodes[], which is 1,2,4,5,3,6 
-        // the only difference is that int nodes[] has -1 , instead of null 
+        tree.preorder(root);
+        System.out.println();
+
+        System.out.print("the inorder traversal is ");
+        tree.inorder(root);
+        System.out.println();
+
+        System.out.print("the postorder traversal is ");
+        tree.postorder(root);
     }
     
 }
