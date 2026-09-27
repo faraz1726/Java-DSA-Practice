@@ -64,6 +64,7 @@ public class Diameter {
         root.right.right = new Node(7);
 
         System.out.println("height of tree is "+height(root));
-        System.out.println("diameter of tree is "+diameter(root).dia);
+        System.out.println("diameter of tree is "+diameter(root).dia);/*for getting diameter */
+        System.out.println(diameter(root).ht);/*for getting height */
     }
 }
