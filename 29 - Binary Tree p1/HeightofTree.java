@@ -38,6 +38,18 @@ public class HeightofTree {
         int rightsum = sum(root.right);
         return leftsum+rightsum+root.data;
     }
+
+    public static int diameter(Node root){
+        if(root == null){
+            return 0;
+        }
+        int leftdia = diameter(root.left);/*when it doesnt passes through root */
+        int lh = height(root.left);
+        int rightdia = diameter(root.right);/*when it doesnt passes through root */
+        int rh = height(root.right);
+        int selfdia = lh+rh+1;/*when it passes through root , so extra +1 */
+        return Math.max(selfdia ,Math.max(leftdia ,rightdia));    
+    }
     public static void main(String args[]){
         Node root = new Node(1);
         root.left = new Node(2);
@@ -50,5 +62,6 @@ public class HeightofTree {
         System.out.println("height of tree is "+height(root));
         System.out.println("Number of nodes is "+count(root));
         System.out.println("Sum of nodes is "+sum(root));
+        System.out.println("diameter of tree is "+diameter(root));
     }
 }
