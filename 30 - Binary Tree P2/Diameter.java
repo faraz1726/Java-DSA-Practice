@@ -1,5 +1,5 @@
 import java.util.*;
-public class HeightofTree {
+public class Diameter {
     static class Node{
         int data;
         Node left;
@@ -19,24 +19,6 @@ public class HeightofTree {
         int lh = height(root.left);
         int rh = height(root.right);
         return Math.max(lh , rh) +1;
-    }
-
-    public static int count(Node root){
-        if(root == null){
-            return 0;
-        }
-        int leftcount = count(root.left);
-        int rightcount = count(root.right);
-        return leftcount+rightcount+1;
-    }
-
-    public static int sum(Node root){
-        if(root ==  null){
-            return 0;
-        }
-        int leftsum = sum(root.left);
-        int rightsum = sum(root.right);
-        return leftsum+rightsum+root.data;
     }
     
     /*this is approach one for calculating diameter */
@@ -61,8 +43,6 @@ public class HeightofTree {
         root.right.right = new Node(7);
 
         System.out.println("height of tree is "+height(root));
-        System.out.println("Number of nodes is "+count(root));
-        System.out.println("Sum of nodes is "+sum(root));
         System.out.println("diameter of tree is "+diameter(root));
     }
 }
