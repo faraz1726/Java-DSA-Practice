@@ -16,6 +16,8 @@ public class Subtree {
             return true;
         }
         //check non identical conditions and return false if they are true
+        //when one is null and other is not null , and their data is also not same
+        // if either of the 3 conditions become true it will return false
         else if(node == null || subroot == null || node.data != subroot.data){
             return false;
         }
