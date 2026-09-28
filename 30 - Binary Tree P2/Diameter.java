@@ -26,9 +26,9 @@ public class Diameter {
         if(root == null){
             return 0;
         }
+        int rightdia = diameter1(root.right); /*when it doesnt passes through root */
         int leftdia = diameter1(root.left);/*when it doesnt passes through root */
         int lh = height(root.left);
-        int rightdia = diameter1(root.right);/*when it doesnt passes through root */
         int rh = height(root.right);
         int selfdia = lh+rh+1;/*when it passes through root , so extra +1 */
         return Math.max(selfdia ,Math.max(leftdia ,rightdia));    
@@ -65,6 +65,6 @@ public class Diameter {
 
         System.out.println("height of tree is "+height(root));
         System.out.println("diameter of tree is "+diameter(root).dia);/*for getting diameter */
-        System.out.println(diameter(root).ht);/*for getting height */
+        System.out.println("height of tree is "+diameter(root).ht);/*for getting height */
     }
 }
