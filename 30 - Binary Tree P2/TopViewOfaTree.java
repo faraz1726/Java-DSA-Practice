@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.LinkedList;
 public class TopViewOfaTree {
     static class Node{
         int data;
