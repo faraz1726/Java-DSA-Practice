@@ -66,10 +66,13 @@ public class PreorderBuildTree {
             }
             Queue<Node> q = new LinkedList<>();// we have to add a null after a node , and remove it also
             q.add(root);
-            q.add(null);
+            q.add(null);// null is for printing from next line
 
             while (!q.isEmpty()) {
+                // as you encounter element in queue remove it and print it 
+                // when you encounter a null , mean go to the next line
                 Node currnode = q.remove();
+                // thats why we print next line , when we get a null 
                 if (currnode == null) {
                     System.out.println();
                     if(q.isEmpty()){
