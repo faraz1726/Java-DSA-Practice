@@ -13,7 +13,7 @@ public class Kthlevel {
             this.right = null;
         }
     }
-    public static void levelorder(Node root , int k){
+    public static void kthlevelelement(Node root , int k){
         if(root == null){
             return;
         }
@@ -23,11 +23,11 @@ public class Kthlevel {
         int m = 1;
 
         while (!q.isEmpty()) {
-                // as you encounter element in queue remove it and print it 
-                // when you encounter a null , mean go to the next line
-            Node currnode = q.remove();
-                // thats why we print next line , when we get a null 
+            // as you encounter element in queue remove it and print it 
+            Node currnode = q.remove();  
             if (currnode == null) {
+                // when you encounter a null , mean go to the next line
+                // thats why we print next line , when we get a null 
                 System.out.println();
                 m++;
                 if(q.isEmpty()){
@@ -50,6 +50,19 @@ public class Kthlevel {
             }
         }
     }
+
+    // using recursion 
+    public static void klevel(Node root , int level , int k){
+        if(root == null){
+            return;
+        }
+        if(level == k){
+            System.out.print(root.data+" ");
+            return;
+        }
+        klevel(root.left, level+1, k);
+        klevel(root.right, level+1, k);
+    }
     public static void main(String args[]){
 
          /*        1
@@ -67,8 +80,9 @@ public class Kthlevel {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
         // it will print the nodes on the level k
-        levelorder(root , 1);
-
+        kthlevelelement(root , 3);
+        
+        klevel(root, 1, 2);
     }
     
 }
