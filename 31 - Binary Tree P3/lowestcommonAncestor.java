@@ -13,6 +13,7 @@ public class lowestcommonAncestor {
         }
     }
     //get path(Node root , node , path) , here n is the node data and root.data is the data of root node.
+    // this will store path from root to n (means node having data n) in the arraylist
     public static boolean getpath(Node root , int n , ArrayList<Node> path){
         if(root == null){
             return false;
@@ -26,6 +27,8 @@ public class lowestcommonAncestor {
         if(foundleft || foundright){
             return true;
         }
+        // if we didnt found our node in the leftsubtree and rightsubtree means , node is not present
+        // so root will not be the part of our path , we remove it 
         path.remove(path.size()-1);
         return false;
     }
@@ -35,6 +38,12 @@ public class lowestcommonAncestor {
         ArrayList<Node> path2 = new ArrayList<>();
         getpath(root, n1, path1);
         getpath(root, n2, path2);
+        // both of them will have the same starting root node as 1 , which is at index 0
+        // thats why we are iterating from i = 0, i<size , until we didnt get different element 
+        // path1 = [1,2,4]
+        // path2 = [1,2,5]
+        // so the last same node is present at i-1 index
+        // suppose when i will be at 4 nd 5 means i = 2, so last same node is at index i-1 
         int i = 0;
         for( ; i<path1.size() && i<path2.size() ;i++){
             if(path1.get(i) != path2.get(i)){
@@ -47,7 +56,7 @@ public class lowestcommonAncestor {
     }
     public static void main(String args[]){
 
-         /*        1
+         /*       1
                 /   \
                2     3
               / \   / \
