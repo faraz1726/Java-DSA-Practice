@@ -12,7 +12,7 @@ public class lowestcommonAncestor {
             this.right = null;
         }
     }
-
+    //get path(Node root , node , path) , here n is the node data and root.data is the data of root node.
     public static boolean getpath(Node root , int n , ArrayList<Node> path){
         if(root == null){
             return false;
@@ -29,7 +29,7 @@ public class lowestcommonAncestor {
         path.remove(path.size()-1);
         return false;
     }
-
+    // last common node will be lowest common ancestor
     public static Node lca(Node root , int n1 , int n2){
         ArrayList<Node> path1 = new ArrayList<>();
         ArrayList<Node> path2 = new ArrayList<>();
