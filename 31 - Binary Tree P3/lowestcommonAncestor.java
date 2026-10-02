@@ -54,6 +54,34 @@ public class lowestcommonAncestor {
         return lca;
 
     }
+
+    public static Node lca2(Node root , int n1 , int n2){
+        if(root == null){
+            return null;
+        }
+        if(root.data == n1 || root.data == n2){
+            return root;
+        }
+        Node leftlca = lca2(root.left, n1, n2);
+        Node rightlca = lca2(root.right, n1, n2);
+
+        //left lca = val , right lca = null, then
+        // means both n1 , n2 exists on the left side
+        if(rightlca == null){
+            return leftlca;
+        }
+
+        //similarly if rightlca = value , leftlca = null
+        // means both n1 , n2 exists on the right side
+        if(leftlca == null){
+            return rightlca;
+        }
+        // now this means one of them exists on leftside and other on right side 
+        // so root is the only common ancestor of both of them , so return root
+        // means when both leftlca && rightlca != null , return root
+        return root;
+
+    }
     public static void main(String args[]){
 
          /*       1
@@ -71,7 +99,7 @@ public class lowestcommonAncestor {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
         int n1 = 4 , n2 = 5;
-        System.out.println(lca(root, n1, n2).data);
+        System.out.println(lca2(root, n1, n2).data);
     }
     
 }
