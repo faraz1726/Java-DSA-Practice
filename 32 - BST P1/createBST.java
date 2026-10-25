@@ -9,7 +9,7 @@ public class createBST {
             this.data = data;
         }
     }
-
+    //IN BST : LEFTNODE < ROOT < RIGHTNODE
     public static Node insert(Node root , int val){
         if(root == null){
             root  =  new Node(val);
