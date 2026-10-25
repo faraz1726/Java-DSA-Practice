@@ -13,54 +13,7 @@ public class Kthancestor {
             this.right = null;
         }
     }
-
-    public static Node lca2(Node root , int n1 , int n2){
-        if(root == null){
-            return null;
-        }
-        if(root.data == n1 || root.data == n2){
-            return root;
-        }
-        Node leftlca = lca2(root.left, n1, n2);
-        Node rightlca = lca2(root.right, n1, n2);
-        if(rightlca == null){
-            return leftlca;
-        }
-        if(leftlca == null){
-            return rightlca;
-        }
-        return root;
-    }
-
-    public static int lcadist(Node root , int n){
-        if(root == null){
-            return -1;
-        }
-        if(root.data == n){
-            return 0;
-        }
-
-        int leftdis = lcadist(root.left, n);
-        int rightdis = lcadist(root.right, n);
-
-        if(leftdis == -1 && rightdis == -1){
-            return -1;
-        }
-        else if(leftdis == -1){
-            return rightdis+1;
-        }
-        else{
-            return leftdis+1;
-        }
-    }
-
-    public static int mindis(Node root , int n1 , int n2){
-        Node lca = lca2(root, n1, n2);
-        int dist1 = lcadist(lca , n1);
-        int dist2 = lcadist(lca , n2);
-        return dist1 + dist2 ; 
-    }
-
+    
     public static int kancestor(Node root , int n , int k){
         if(root == null){
             return -1;
