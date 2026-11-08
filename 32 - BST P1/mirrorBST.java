@@ -10,6 +10,12 @@ public class mirrorBST {
             this.data = data;
         }
     }
+
+    public static Node createMirror(Node root){
+        if(root == null){
+            return null;
+        }
+    }
     public static void main(String args[]){
     /*
                             8
