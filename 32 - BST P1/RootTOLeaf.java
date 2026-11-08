@@ -48,6 +48,21 @@ public class RootTOLeaf {
         root2leaf(root.right, path);
         path.remove(path.size()-1);//remove current node from the path while traversing back 
     }
+
+    public static boolean validateBST(Node root , Node min , Node max){
+        if(root == null){
+            return true;
+        }
+        //cases for Root
+        if(min != null && root.data <= min.data){
+            return false;
+        }
+        else if(max != null && root.data >= max.data){
+            return false;
+        }
+        //cases for leaf nodes
+        return validateBST(root.left, min, root) && validateBST(root.right, root, max);
+    }
     public static void main(String args[]){
         int values[] = {8,5,3,6,10,11,15};
         Node root = null;
@@ -57,7 +72,11 @@ public class RootTOLeaf {
         }
 
         root2leaf(root, new ArrayList<>());
-       
-
+        if(validateBST(root, null , null)){
+            System.out.println("valid");
+        }
+        else{
+            System.out.println("inValid");
+        }
     }
 }
