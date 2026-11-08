@@ -90,6 +90,25 @@ public class deletenodeinBST {
             printinrange(root.right, k1, k2);
         }
     }
+    
+    public static void printpath(ArrayList<Integer> path){
+        for(int i  = 0 ; i<path.size() ; i++){
+            System.out.print(path.get(i)+" ");
+        }
+        System.out.println();
+    }
+    public static void root2leaf(Node root , ArrayList<Integer> path){
+        if(root == null){
+            return;
+        }
+        path.add(root.data);
+        if(root.left == null && root.right == null){
+            printpath(path);
+        }
+        root2leaf(root.left ,path);
+        root2leaf(root.right, path);
+        path.remove(path.size()-1);//remove current node from the path while traversing back 
+    }
     public static void main(String args[]){
         int values[] = {8,5,3,1,4,6,10,11,14};
         Node root = null;
