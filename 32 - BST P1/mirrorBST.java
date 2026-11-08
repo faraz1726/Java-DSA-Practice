@@ -33,6 +33,7 @@ public class mirrorBST {
     }
     public static void main(String args[]){
     /*
+            GIVEN BST
                             8
                          /     \
                         5      10
@@ -43,7 +44,7 @@ public class mirrorBST {
 
 
 /*
- 
+              MIRROR BST
                       8      
                     /    \  
                    10     5      
