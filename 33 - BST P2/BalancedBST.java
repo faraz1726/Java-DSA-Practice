@@ -1,5 +1,9 @@
 //Balanced BST in one which have minimum possible height
 import java.util.*;
+
+
+//Note : this question is SORTED ARRAY TO BALANCED BST
+//SORTED ORDER IS JUST LIKE INORDER SEQUENCE
 public class BalancedBST{
     static class Node{
         int data;
