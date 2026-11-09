@@ -27,6 +27,26 @@ public class LargestBST {
             this.max = max;
         }
     }
+
+    public static int maxbst = 0;
+
+    public static info largestbst(Node root){
+        info leftinfo = largestbst(root.left);
+        info rightinfo = largestbst(root.right);
+
+        int size = leftinfo.size + rightinfo.size + 1;
+        int min = Math.min(root.data , Math.min(leftinfo.min , rightinfo.min)); 
+        int max = Math.max(root.data , Math.max(leftinfo.max , rightinfo.max));
+
+        if(root.data <= leftinfo.max || root.data >= rightinfo.min){
+            return new info(false, size ,min , max);
+        }
+
+        if(leftinfo.isbst && rightinfo.isbst){
+            maxbst = Math.max(maxbst , size);
+            return new info(true, size, min, max);
+        }
+    }
     public static void main(String[] args){
         Node root = new Node(50);
         root.left = new Node(30);
