@@ -4,6 +4,7 @@ import java.util.*;
 
 //Note : this question is SORTED ARRAY TO BALANCED BST
 //SORTED ORDER IS JUST LIKE INORDER SEQUENCE
+//INORDER SEQUENCE GIVES SORTED ORDER
 public class BalancedBST{
     static class Node{
         int data;
