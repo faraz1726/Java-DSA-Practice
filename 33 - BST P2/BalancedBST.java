@@ -43,7 +43,7 @@ public class BalancedBST{
         preorder(root);
 
          /*
-            GIVEN BST
+            balanced BST
                             8
                          /     \
                         5      11
