@@ -31,6 +31,9 @@ public class LargestBST {
     public static int maxbst = 0;
 
     public static info largestbst(Node root){
+        if(root == null){
+            return new info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE);
+        }
         info leftinfo = largestbst(root.left);
         info rightinfo = largestbst(root.right);
 
@@ -46,6 +49,7 @@ public class LargestBST {
             maxbst = Math.max(maxbst , size);
             return new info(true, size, min, max);
         }
+        return new info(false, size, min, max);
     }
     public static void main(String[] args){
         Node root = new Node(50);
@@ -58,6 +62,9 @@ public class LargestBST {
         root.right.right = new Node(70);
         root.right.right.left = new Node(65);
         root.right.right.right = new Node(80);
+
+        info information = largestbst(root);
+        System.out.println("size of largest bst is "+maxbst);
         /*
                   50
                 /    \
