@@ -13,13 +13,17 @@ public class InsertInheap {
             int par = (x-1)/2;
 
             //till child value is less than parents value 
-            //because in min heap parent value is less than child value
+            //because in min heap parent(root node) value is less than child(leaf node) value
             while(arr.get(x) < arr.get(par)){
                 //swap
                 int temp = arr.get(x);
                 arr.set(x, arr.get(par));
                 arr.set(par , temp);
             }
+        }
+        //root node or 0th index element is the minimum element in a min heap
+        public int peek(){
+            return arr.get(0);
         }
         
     }
