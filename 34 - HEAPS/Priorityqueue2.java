@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.PriorityQueue;
 public class Priorityqueue2 {
     /*
@@ -24,7 +25,10 @@ public class Priorityqueue2 {
         }
     }
     public static void main(String args[]){
-        PriorityQueue<student> stu = new PriorityQueue<>();
+        /*for Reversing the order 
+        PriorityQueue<student> stu = new PriorityQueue<>(Comparator.reverseOrder());
+         */
+        PriorityQueue<student> stu = new PriorityQueue<>(Comparator.reverseOrder());
         stu.add(new student("A", 4));
         stu.add(new student("B", 5));
         stu.add(new student("C", 2));
