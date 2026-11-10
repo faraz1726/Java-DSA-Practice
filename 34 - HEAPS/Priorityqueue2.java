@@ -28,7 +28,7 @@ public class Priorityqueue2 {
         /*for Reversing the order 
         PriorityQueue<student> stu = new PriorityQueue<>(Comparator.reverseOrder());
          */
-        PriorityQueue<student> stu = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<student> stu = new PriorityQueue<>();
         stu.add(new student("A", 4));
         stu.add(new student("B", 5));
         stu.add(new student("C", 2));
