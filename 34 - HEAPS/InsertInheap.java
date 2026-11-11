@@ -27,14 +27,15 @@ public class InsertInheap {
         }
 
         private void heapify(int i){
-            int left = 2*i+1;
-            int right = 2*i+2;
-            int minidx = i;// asssumed 
+            int left = 2*i+1;//index of left node
+            int right = 2*i+2;// index of right node
+            int minidx = i;// asssumed that the root is having the min value index
 
+            //if left node is smaller than the root node
             if(left < arr.size() && arr.get(minidx) > arr.get(left)){
                 minidx = left;
             }
-
+            //if right node is smaller than the root node
             if(right < arr.size() && arr.get(minidx) > arr.get(right)){
                 minidx = right;
             }
