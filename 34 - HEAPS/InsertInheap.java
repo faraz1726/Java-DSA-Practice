@@ -1,6 +1,6 @@
 import java.util.*;
 public class InsertInheap {
-
+    //MINIMUM HEAP 
     static class heap{
         ArrayList<Integer> arr = new ArrayList<>();
         //add at last
