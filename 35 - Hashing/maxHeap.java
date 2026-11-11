@@ -38,11 +38,11 @@ public class maxHeap {
 
             //COMPARING LEFT AND RIGHT NODE WITH ROOT NODE AND SWAPPING THEM IF THEY ARE SMALLER
             //if left node is smaller than the root node
-            if(left < arr.size() && arr.get(minidx) > arr.get(left)){
+            if(left < arr.size() && arr.get(minidx) < arr.get(left)){
                 minidx = left;
             }
             //if right node is smaller than the root node
-            if(right < arr.size() && arr.get(minidx) > arr.get(right)){
+            if(right < arr.size() && arr.get(minidx) < arr.get(right)){
                 minidx = right;
             }
             //when the heap is disturbed , and the root is not having the min value
